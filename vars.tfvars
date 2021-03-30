@@ -1,0 +1,9 @@
+event_stream_name="Event Streams-2t"
+event_stream_region="us-south"
+event_stream_retention = 1
+logging_region = "us-south"
+event_stream_topic="export_logs"
+buffer_time = 15
+logging_service_key = ""
+event_stream_resource_group = "Default"
+ibmcloud_api_key=""
