@@ -18,7 +18,7 @@ As illustrated, the `Export to Event Streams` has following components:
 This repo automates the deployment of the `Export to Event Streams` capability using Terraform & IBM Cloud Schematics.
 
 ## Prerequisites
-- You must have one of the following log sources already provisioned, in the preferred region / locatoin:
+- You must have one of the following log sources already provisioned in the preferred region / locatoin:
   - [IBM Log Analysis](https://cloud.ibm.com/observe/logging)
   - [IBM Cloud Activity Tracker](https://cloud.ibm.com/observe/activitytracker)
 - You must have a service key from the log source. To get the service key (`logging_service_key`):
@@ -96,7 +96,7 @@ The Export API depends on the logs already being stored. For this reason the Clo
 
 A `buffer_time` of 15 minutes usually achieves a high retrieval rate of logs. However, logs will occasionally take longer to be transmitted and stored. In this case, those logs will not be included in Event Streams. If this becomes a concern, you may wish to increase the `buffer_time`.
 
-Do not deploy `Export to Event Streams` multilpe instances to one LogDNA instance. Export API might return the 429 error and data might not be exported.
+Do not connect more than one Export to Event Streams instance to the same LogDNA instance. Export API might return the 429 error and data might not be exported.
 
 ### Design details
 

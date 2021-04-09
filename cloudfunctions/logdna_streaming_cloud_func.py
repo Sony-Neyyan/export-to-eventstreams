@@ -40,8 +40,8 @@ def main(params):
     msg=""
     result = {"success": True}
     # Number of partitions of one minute
-    p = 12
-    retry_Limit = 2
+    p = 6
+    retry_Limit = 3
     while(i < p):
         retry_count = 0
         st = (60/p)*(p-i)-0.001
@@ -136,7 +136,7 @@ def logFetch(ft, tt, validatedParams):
     except Exception as e:
         logging.warning(e)
         traceback.print_exc(limit=5)
-        time.sleep(1)
+        time.sleep(3)
         return None
     return response
 def getResultForException(e):
