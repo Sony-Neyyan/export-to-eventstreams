@@ -46,7 +46,7 @@ def main(params):
         retry_count = 0
         st = (60/p)*(p-i)-0.001
         et = (60/p)*(p-(i+1))
-        values = logFetch(ct-st, ct-et, validatedParams)
+        values=logFetch(int((ct-st)*1000),int((ct-et)*1000), validatedParams)
         retry_flag = False
 
         if  values == None:
@@ -58,7 +58,7 @@ def main(params):
         while (retry_flag == True) and retry_count < retry_Limit:
             retry_count += 1
             logging.info("retrying counter:" + str(retry_count) + " and partition number:" + str(i+1))
-            values=logFetch(ct-st,ct-et, validatedParams)
+            values=logFetch(int((ct-st)*1000),int((ct-et)*1000), validatedParams)
             if  values == None:
                 continue
             if values.status != 200:

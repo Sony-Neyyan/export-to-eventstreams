@@ -18,7 +18,7 @@ As illustrated, the `Export to Event Streams` has following components:
 This repo automates the deployment of the `Export to Event Streams` capability using Terraform & IBM Cloud Schematics.
 
 ## Prerequisites
-- You must have one of the following log sources already provisioned in the preferred region / locatoin:
+- You must have one of the following log sources already provisioned in the preferred region / location:
   - [IBM Log Analysis](https://cloud.ibm.com/observe/logging)
   - [IBM Cloud Activity Tracker](https://cloud.ibm.com/observe/activitytracker)
 - You must have a service key from the log source. To get the service key (`logging_service_key`):
