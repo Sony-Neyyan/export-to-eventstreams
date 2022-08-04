@@ -1,7 +1,7 @@
 resource "ibm_resource_instance" "es_instance" {
   name              = var.event_stream_name
   service           = "messagehub"
-  plan              = "enterprise-3nodes-2tb"
+  plan              = "lite"
   location          = var.event_stream_region
   resource_group_id = var.streaming_lite_resource_group_id
   tags =  var.event_stream_label
